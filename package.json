@@ -1,4 +1,10 @@
 {
+  "displayName": "Node Auth RestAPI",
+  "version": "1.0",
+  "author": {
+    "name": "Sawan Kumar Shakya",
+    "email": "sawanshakya1995@gmail.com"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",

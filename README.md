@@ -19,8 +19,9 @@ Make sure you have Node.js installed on your machine. You can download it from t
    cd <repository-directory>
 
 2. Install the required dependencies:
-    
-    npm install jsonwebtoken bcryptjs
+   
+   ```bash 
+   npm install jsonwebtoken bcryptjs
 
 3. Set up your environment variables:
 

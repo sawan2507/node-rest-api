@@ -7,11 +7,8 @@ const router = express.Router();
 
 // Register route
 router.post('/register', async (req, res) => {
-  const { username, password } = req.body;
-  console.log(req.body)
   try {
     const response = await User.create(req.body);
-
     if(response.status) {
         res.status(200).json({ message: 'User registered', 'status' : response.status, 'data':[] });
     } else {

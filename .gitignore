@@ -1,0 +1,4 @@
+node_modules/
+.env
+
+/desktop-web-push-notification-firebase-adminsdk-*.json

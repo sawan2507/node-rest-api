@@ -14,20 +14,20 @@ const axios = require("axios");
 
 const sendNotification = ({ token, title, body, data }) => {
   console.log('token, title, body, data ', token, title, body, data)
-  const message = {
-    data,
-    token
-  };
+  // const message = {
+  //   data,
+  //   token
+  // };
 
-  admin
-    .messaging()
-    .send(message)
-    .then((response) => {
-      console.log("Successfully sent:", response);
-    })
-    .catch((error) => {
-      console.error("Error sending message:", error);
-    });
+  // admin
+  //   .messaging()
+  //   .send(message)
+  //   .then((response) => {
+  //     console.log("Successfully sent:", response);
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error sending message:", error);
+  //   });
 };
 
 const sendAllNotification = ({ token, title, body, data }) => {
@@ -36,16 +36,17 @@ const sendAllNotification = ({ token, title, body, data }) => {
     data,
     token
   };
+  console.log(message)
 
-  admin
-    .messaging()
-    .sendEachForMulticast(message)
-    .then((response) => {
-      console.log("Successfully sent:", response);
-    })
-    .catch((error) => {
-      console.error("Error sending message:", error);
-    });
+  // admin
+  //   .messaging()
+  //   .sendEachForMulticast(message)
+  //   .then((response) => {
+  //     console.log("Successfully sent:", response);
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error sending message:", error);
+  //   });
 };
 
 async function sendMail(tomail, subject, html) {

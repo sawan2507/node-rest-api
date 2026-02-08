@@ -5,12 +5,12 @@ const puppeteer = require('puppeteer')
 const path = require('path')
 
 // Load service account key (download from Firebase Console)
-const serviceAccount = require("../desktop-web-push-notification-firebase-adminsdk-fbsvc-d7a90a13bf.json");
+// const serviceAccount = require("../desktop-web-push-notification-firebase-adminsdk-fbsvc-d7a90a13bf.json");
 const axios = require("axios");
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+// });
 
 const sendNotification = ({ token, title, body, data }) => {
   console.log('token, title, body, data ', token, title, body, data)

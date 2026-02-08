@@ -45,12 +45,18 @@ const admin = {
   async findByEmail(email) {
     // const connection = await db();
     console.log("Looking for email........");
-    const [rows] = await db.execute(
+    try {
+      console.log('email ---------- ', email)
+      const [rows] = await db.execute(
       "SELECT * FROM `admins` WHERE `email` = ?",
       [email]
-    );
+      );
 
-    return rows[0];
+      return rows[0];
+    } catch (error) {
+      console.log('error ----------', error)
+    }
+    
   },
 
   async findByMobile(mobile) {
